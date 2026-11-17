@@ -87,7 +87,7 @@ export default function Onboarding() {
         </div>
         <div>
           <label className="label" htmlFor="min">Smallest job worth your time (estimated project value, $)</label>
-          <input id="min" className="input" type="number" min={0} step={1000} value={minValue} onChange={(e) => setMinValue(Number(e.target.value))} />
+          <input id="min" className="input" type="number" min={0} step="any" value={minValue} onChange={(e) => setMinValue(Number(e.target.value))} />
         </div>
         {err && <p className="text-sm text-red-700">{err}</p>}
         <button className="btn-primary w-full" disabled={busy}>{busy ? "Finding your leads…" : "Show me my leads"}</button>
